@@ -3,8 +3,8 @@
 use Symfony\Component\Routing;
 
 $routes = new Routing\RouteCollection();
-$routes->add('api', new Routing\Route('/servicetest/api.php/{name}', [
-  'name'        => 'World',
+$routes->add('api', new Routing\Route('/servicetest/api.php/{id}', [
+  'id'          => null,
   '_controller' => '\\Controller\\ApiController::indexAction',
 ]));
 

@@ -11,6 +11,9 @@ use Symfony\Component\HttpKernel\Controller\ControllerResolver;
 $dotenv = Dotenv::create(__DIR__.'/..');
 $dotenv->load();
 $dotenv->required('APP_ENV');
+$dotenv->required('MEMCACHED_HOST');
+$dotenv->required('MEMCACHED_PORT');
+
 
 $env = getenv('APP_ENV');
 
