@@ -1,0 +1,29 @@
+{
+    "name": "netwizzy/api-test",
+    "description": "Desafío netwizzy para la realización de un servicio API rest para lala gestión de juegos online",
+    "type": "project",
+    "config": {
+      "platform": {
+          "php": "5.4.16"
+      }
+    },
+    "authors": [
+        {
+            "name": "Adolfo Agulló",
+            "email": "adagber@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/http-foundation": "^2.8",
+        "symfony/routing": "^2.8",
+        "symfony/http-kernel": "^2.8",
+        "vlucas/phpdotenv": "^3.6",
+        "guzzlehttp/guzzle": "^5.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8"
+    },
+    "autoload": {
+      "psr-4": { "": "src/" }
+    }
+}
