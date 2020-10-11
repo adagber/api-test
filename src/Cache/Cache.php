@@ -17,7 +17,7 @@ class Cache
 
     if(false === $this->memcache->connect($host, $port)){
 
-      throw new \Exception('No se ha podido conectar');
+      throw new \Exception('No se ha podido conectar al host');
     }
   }
 

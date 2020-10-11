@@ -134,8 +134,8 @@ class ServicetestModel
 
     $allGames = $this->getGamesFromApi();
 
-    //Guardamos en la cache los juegos durante 1 hora
-    $this->cache->memcache->set('ALL_GAMES', $allGames, MEMCACHE_COMPRESSED, 3600);
+    //Guardamos en la cache los juegos durante un día
+    $this->cache->memcache->set('ALL_GAMES', $allGames, MEMCACHE_COMPRESSED, 86400);
 
     return $allGames;
   }
@@ -145,7 +145,6 @@ class ServicetestModel
 
     if($this->env != 'prod'){
 
-      
       $content = file_get_contents(dirname(__FILE__).'/../../var/data/games.json');
       return json_decode($content, true);
     }
