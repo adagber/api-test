@@ -146,7 +146,7 @@ class ServicetestModel
     if($this->env != 'prod'){
 
       
-      $content = file_get_contents(dirname(__FILE__).'/../../games.json');
+      $content = file_get_contents(dirname(__FILE__).'/../../var/data/games.json');
       return json_decode($content, true);
     }
     
@@ -159,7 +159,7 @@ class ServicetestModel
 
     if($this->env != 'prod'){
 
-      $content = file_get_contents(dirname(__FILE__).'/../../rounds.json');
+      $content = file_get_contents(dirname(__FILE__).'/../../var/data/rounds.json');
       return json_decode($content, true);
     }
 
